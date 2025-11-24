@@ -1,1 +1,20 @@
-/* You can add global styles to this file, and also import other style files */
+@use './app/shared/styles/variables';
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: var(--font-size-normal);
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+main {
+    padding: var(--spacing-medium);
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    font-size: var(--font-size-big);
+    margin-bottom: var(--spacing-medium);
+}
