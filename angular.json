@@ -82,6 +82,8 @@
         "test": {
           "builder": "@angular/build:unit-test",
           "options": {
+            "runner": "vitest",
+            "runnerConfig": "vitest.config.ts",
             "coverage": true,
             "coverageInclude": ["src/**/*.ts"],
             "coverageReporters": ["html", "lcov"],

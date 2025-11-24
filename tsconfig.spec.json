@@ -6,7 +6,9 @@
     "outDir": "./out-tsc/spec",
     "types": [
       "vitest/globals"
-    ]
+    ],
+    "sourceMap": true,
+    "inlineSources": true
   },
   "include": [
     "src/**/*.d.ts",
