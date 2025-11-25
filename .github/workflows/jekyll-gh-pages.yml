@@ -29,12 +29,12 @@ jobs:
         run: npm run build -- --configuration production --base-href "/circunomics-coding-challenge/"
 
       - name: Add 404 fallback
-        run: cp dist/circunomics-coding-challenge/index.html dist/circunomics-coding-challenge/404.html
+        run: cp dist/circunomics-coding-challenge/browser/index.html dist/circunomics-coding-challenge/browser/404.html
 
-      - name: Upload artifact
+      - name: Upload artifact for Pages
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/circunomics-coding-challenge
+          path: dist/circunomics-coding-challenge/browser
 
   deploy:
     needs: build-and-deploy
