@@ -1,0 +1,30 @@
+@let repositoryData = repository();
+
+<div class="container-avatar-and-text">
+    <img class="avatar" [src]="repositoryData.owner.avatar_url" alt="{{ repositoryData.owner.login }}'s avatar">
+
+    <div class="container-text">
+        <div class="container-title-and-rating" (click)="handleRepositoryNameClicked()">
+            <p
+                class="title" 
+                [title]="repositoryData.name" 
+            >
+                {{ repositoryData.name }}
+            </p>
+            
+            @if (isRatingVisible()) {
+                <app-rating [isStatic]="true" [repositoryRating]="ratingMap()[repositoryData.id] ?? 0" />
+            }
+        </div>
+        <p class="description" [title]="repositoryData.description">{{ repositoryData.description }}</p>
+
+        <div class="container-stats">
+            <p class="stars">Stars: {{ repositoryData.stargazers_count }}</p>
+            <p class="issues">Issues: {{ repositoryData.open_issues_count }}</p>
+            <p class="submitted">
+                Submitted {{ repositoryData.created_at | timestampToTimeInterval }} ago 
+                by <span class="owner">{{ repositoryData.owner.login }}</span>
+            </p>
+        </div>
+    </div>
+</div>

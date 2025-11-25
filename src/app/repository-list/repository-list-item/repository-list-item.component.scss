@@ -1,0 +1,59 @@
+.container-avatar-and-text {
+    display: flex;
+    gap: var(--spacing-small);
+    
+    .avatar {
+        height: 100px;
+    }
+    
+    .container-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 890px;
+
+        .container-title-and-rating {
+            display: flex;
+            gap: var(--spacing-small);
+
+            .title {
+                font-size: var(--font-size-medium);
+                font-weight: bold;
+                cursor: pointer;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                width: fit-content;
+    
+                &:hover {
+                    color: #808080;
+                }
+            }
+        }
+        
+        .description {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .container-stats {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-small);
+        
+            .stars,
+            .issues {
+                border: 2px solid #000;
+                padding: 5px;
+            }
+            
+            .submitted {
+                .owner {
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
