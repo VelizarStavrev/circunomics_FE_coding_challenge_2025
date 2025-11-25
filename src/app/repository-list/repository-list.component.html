@@ -1,0 +1,18 @@
+<h1>Repositories ({{repositories().length}} of {{repositoriesTotal()}}):</h1>
+
+<div class="container-repository-list-items">
+    @for (repository of repositories(); track $index) {
+        <app-repository-list-item
+            [isRatingVisible]="true"
+            [repository]="repository"
+            (repositoryNameClicked)="repositoryClicked(repository)"
+        />
+    }
+</div>
+
+@if (isModalVisible() && selectedRepository) {
+    <app-repository-list-modal
+        [repository]="selectedRepository"
+        (closeModal)="handleCloseModal()"
+    ></app-repository-list-modal>
+}

@@ -1,0 +1,7 @@
+.container-repository-list-items {
+   display: flex;
+   flex-direction: column;
+   gap: var(--spacing-medium);
+   width: 1000px;
+   overflow: hidden;
+}
