@@ -26,7 +26,7 @@ jobs:
         run: npm ci
 
       - name: Build Angular app
-        run: npm run build -- --configuration production --base-href "/circunomics-coding-challenge/"
+        run: npm run build -- --configuration production --base-href "/circunomics-coding-challenge/" --deploy-url "/circunomics-coding-challenge/"
 
       - name: Add 404 fallback
         run: cp dist/circunomics-coding-challenge/browser/index.html dist/circunomics-coding-challenge/browser/404.html
