@@ -31,17 +31,15 @@ jobs:
         run: npm ci
 
       - name: Build Angular app
-        # Set base-href to repo name for GitHub Pages
         run: npm run build -- --configuration production --base-href "/circunomics-coding-challenge/"
 
       - name: Add 404 fallback for Angular routing
-        # Copy index.html to 404.html so Angular can handle routes
-        run: cp dist/circunomics-coding-challenge/index.html dist/circunomics-coding-challenge/404.html
+        run: cp dist/circunomics-coding-challenge/circunomics-coding-challenge/index.html dist/circunomics-coding-challenge/circunomics-coding-challenge/404.html
 
       - name: Upload artifact for Pages
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/circunomics-coding-challenge
+          path: dist/circunomics-coding-challenge/circunomics-coding-challenge
 
   deploy:
     runs-on: ubuntu-latest
