@@ -1,0 +1,6 @@
+<svg width="96" height="91" viewBox="0 0 96 91" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path 
+        d="M47.5528 0L58.7785 34.5491H95.1057L65.7164 55.9017L76.9421 90.4509L47.5528 69.0983L18.1636 90.4509L29.3893 55.9017L0 34.5491H36.3271L47.5528 0Z" 
+        [attr.fill]="isHighlighted() ? highlightedfillColor : normalfillColor"
+    />
+</svg>

@@ -1,0 +1,18 @@
+<div class="container-rating">
+    @if (isStatic()) {
+        @for (star of stars; track $index) {
+            <app-star-svg
+                [isHighlighted]="isHighlighted()(star)"
+            ></app-star-svg>
+        }
+    } @else {
+        @for (star of stars; track $index) {
+            <app-star-svg
+                [isHighlighted]="isHighlighted()(star)"
+                (mouseenter)="onMouseEnter(star)"
+                (mouseleave)="onMouseLeave()"
+                (click)="onClick(star)"
+            ></app-star-svg>
+        }
+    }
+</div>
