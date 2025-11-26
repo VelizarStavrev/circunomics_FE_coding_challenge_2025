@@ -2,6 +2,9 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.0.
 
+## Deployment to GitHub Pages
+Link: https://velizarstavrev.github.io/circunomics_FE_coding_challenge_2025/
+
 ## Prerequisites
 - Node.js - v20.19.0 or newer
 
@@ -22,3 +25,4 @@ The code coverage folder has been pushed along with the repository
 - Vitest libraries were added to the project for testing and coverage
 - Angular CLI was used to generate components, pipes, services
 - No additional libraries were added to help with styling and logic to demonstrate understanding of the core technologies
+
